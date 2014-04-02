@@ -20,9 +20,9 @@ function fkr_gen_user($user_amount, $user_group)
     for ($i = 0; $i < $user_amount; $i++)
     {
         $user = array(
-            'user_name'    => $faker->firstName,
-            'user_text'    => $faker->sentence($nbWords = 5),
-            'user_email'   => $faker->email
+            'user_name'  => $faker->firstName,
+            'user_text'  => $faker->sentence($nbWords = 5),
+            'user_email' => $faker->email
             );
         $users[] = $user;
     }
@@ -55,6 +55,8 @@ function fkr_gen_user($user_amount, $user_group)
  */
 function fkr_gen_page($page_cat, $page_amount, $page_max_title, $page_max_chars)
 {
+    global $cfg;
+
     $faker = Faker\Factory::create();
 
     for ($i = 0; $i < $page_amount; $i++)
@@ -64,9 +66,10 @@ function fkr_gen_page($page_cat, $page_amount, $page_max_title, $page_max_chars)
             'page_title'  => $faker->sentence($nbWords = $page_max_title),
             'page_desc'   => $faker->sentence($nbWords = 5),
             'page_text'   => $faker->text($maxNbChars = $page_max_chars),
+            'page_parser' => $cfg['page']['parser'],
             'page_author' => '',
             'page_date'   => $faker->unixTime($max = 'now')
-            );
+        );
         $pages[] = $page;
     }
 
