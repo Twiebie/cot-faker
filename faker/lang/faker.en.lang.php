@@ -10,9 +10,6 @@ $L['fkr_page_max_chars'] = 'Characters in page text';
 $L['fkr_user_amount'] = 'Amount of users';
 $L['fkr_user_group']  = 'Group for users';
 
-// Forums
-$L['fkr_forums_amount'] = 'Amount of posts';
-
 // Buttons
 $L['fkr_generate'] = 'Generate';
 
