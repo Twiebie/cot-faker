@@ -1,3 +1,7 @@
+
+##Requirements
+- PHP >= 5.3.3.
+
 ##Installation
 
 1. Copy the `faker` folder to your Cotonti plugins folder.
